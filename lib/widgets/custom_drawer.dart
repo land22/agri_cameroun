@@ -63,7 +63,7 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.store),
             title: Text('Marché virtuel'),
             onTap: () {
-              // Navigation vers la gestion des alertes
+              Navigator.pushNamed(context, 'market_screen');
             },
           ),
           ListTile(

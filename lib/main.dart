@@ -6,6 +6,7 @@ import 'screens/register_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/advice_list_screen.dart';
 import 'screens/culture_tracking_screen.dart';
+import 'screens/market_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         'home': (context) => ProfileScreen(),
         'advice_list_screem': (context) => AdviceListScreen(),
         'culture_tracking': (context) => CultureTrackingScreen(),
+        'market_screen': (context) => MarketScreen(),
       },
     );
   }
