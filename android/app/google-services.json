@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "879917623700",
+    "project_id": "agricameroun-dc63a",
+    "storage_bucket": "agricameroun-dc63a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879917623700:android:c5ea6517fae20a9f7d0781",
+        "android_client_info": {
+          "package_name": "com.example.agri_cameroun"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqTT3iR-Li-a2Q6Dexfgi7QZ9I4gyQRrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
