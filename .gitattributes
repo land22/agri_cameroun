@@ -1,0 +1,14 @@
+# Normalize line endings for text files to LF
+* text=auto
+
+# Binary files
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# Flutter and platform-specific files
+android/app/google-services.json text eol=lf
+linux/flutter/* text eol=lf
+macos/Flutter/* text eol=lf
+windows/flutter/* text eol=lf
+pubspec.lock text eol=lf
