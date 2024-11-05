@@ -7,11 +7,28 @@ import 'screens/profile_screen.dart';
 import 'screens/advice_list_screen.dart';
 import 'screens/culture_tracking_screen.dart';
 import 'screens/market_screen.dart';
+import 'screens/notifications_screen.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'providers/notifications_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+
+  // Initialisation des notifications
+  NotificationsProvider notificationsProvider = NotificationsProvider();
+  notificationsProvider.initializeNotifications();
+  notificationsProvider.handleFirebaseMessaging();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => notificationsProvider),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -31,6 +48,7 @@ class MyApp extends StatelessWidget {
         'advice_list_screem': (context) => AdviceListScreen(),
         'culture_tracking': (context) => CultureTrackingScreen(),
         'market_screen': (context) => MarketScreen(),
+        'notifications': (context) => NotificationsScreen(),
       },
     );
   }

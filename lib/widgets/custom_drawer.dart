@@ -70,7 +70,9 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.notifications), // Utiliser l'icône choisie
             title: Text('Notifications et alertes'),
             onTap: () {
-              // Naviguer vers la page des notifications et alertes
+              Navigator.pop(context);
+              Navigator.pushNamed(
+                  context, 'notifications'); // Ajoutez cette ligne
             },
           ),
           ListTile(
