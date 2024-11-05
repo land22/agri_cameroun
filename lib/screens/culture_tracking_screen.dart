@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import '../widgets/custom_drawer.dart';
 import 'add_activity_screen.dart';
 import 'edit_activity_screen.dart'; // Vérifiez que le nom du fichier est correct.
 
@@ -13,6 +14,7 @@ class CultureTrackingScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Suivi des Cultures'),
       ),
+      drawer: user != null ? CustomDrawer() : null,
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('activities').snapshots(),
         builder: (context, snapshot) {

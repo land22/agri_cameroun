@@ -42,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.groups),
             title: Text('Gestion des utilisateurs'),
             onTap: () {
-              // Navigation vers la gestion des utilisateurs
+              Navigator.pushNamed(context, 'user_management');
             },
           ),
           ListTile(
@@ -76,10 +76,11 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.language), // Icône pour la partie multilingue
-            title: Text('Accessibilité'),
+            leading: Icon(Icons.cloud), // Icône pour la partie multilingue
+            title: Text('La météo'),
             onTap: () {
-              // Naviguer vers la page des paramètres multilingues et accessibilité
+              Navigator.pop(context);
+              Navigator.pushNamed(context, 'weather'); // Ajoutez cette ligne
             },
           ),
           ListTile(
